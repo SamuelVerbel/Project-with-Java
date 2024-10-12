@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Calculadora {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese los kilos de oro: ");
+        double kilos = sc.nextDouble();
+        System.out.print("Ingrese el precio por onza: ");
+        double precioOnza = sc.nextDouble();
+        
+        double gramos = kilos * 1000;
+        double onzas = gramos / 28.3495;
+        double valor = onzas * precioOnza;
+        
+        System.out.println("El valor en pesos es: " + valor);
+        sc.close();
+    }
+}
