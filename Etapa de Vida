@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Etapadevida {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese su edad: ");
+        int edad = sc.nextInt();
+        
+        // Condicional para determinar la etapa de vida
+        if (edad >= 1 && edad <= 12) {
+            System.out.println("Niñez");
+        } else if (edad >= 13 && edad <= 17) {
+            System.out.println("Adolescencia");
+        } else if (edad >= 18 && edad <= 30) {
+            System.out.println("Juventud");
+        } else if (edad >= 31 && edad <= 60) {
+            System.out.println("Adultez");
+        } else if (edad >= 61 && edad <= 100) {
+            System.out.println("Vejez");
+        } else {
+            System.out.println("Edad no válida");
+        }
+        sc.close();
+    }
+}
