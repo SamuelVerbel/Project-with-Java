@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class CalculoIVA {
+    public static void main(String[] args) {
+        final double IVA = 0.19;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Precio producto 1: ");
+        double precio1 = sc.nextDouble();
+        System.out.print("Cantidad producto 1: ");
+        int cantidad1 = sc.nextInt();
+        
+        System.out.print("Precio producto 2: ");
+        double precio2 = sc.nextDouble();
+        System.out.print("Cantidad producto 2: ");
+        int cantidad2 = sc.nextInt();
+        
+        double total = (precio1 * cantidad1) + (precio2 * cantidad2);
+        double impuesto = total * IVA;
+        double totalPagar = total + impuesto;
+        
+        System.out.println("Subtotal: " + total);
+        System.out.println("Impuesto: " + impuesto);
+        System.out.println("Total a pagar: " + totalPagar);
+        sc.close();
+    }
+}
