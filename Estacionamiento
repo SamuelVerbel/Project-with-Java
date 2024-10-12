@@ -19,5 +19,6 @@ public class Estacionamiento {
         System.out.println("Total: " + total);
         System.out.println("Descuento: " + descuento);
         System.out.println("Total a pagar: " + totalPagar);
+        sc.Close();
     }
 }
