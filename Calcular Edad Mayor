@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Hermanos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Edad hermano 1: ");
+        int edad1 = sc.nextInt();
+        System.out.print("Edad hermano 2: ");
+        int edad2 = sc.nextInt();
+        
+        // Condicional para determinar el hermano mayor
+        if (edad1 > edad2) {
+            System.out.println("Hermano 1 es mayor");
+        } else {
+            System.out.println("Hermano 2 es mayor");
+        }
+
+        // Calcular la diferencia
+        int diferencia = Math.abs(edad1 - edad2);
+        System.out.println("Diferencia de edad: " + diferencia);
+        sc.close();
+    }
+}
