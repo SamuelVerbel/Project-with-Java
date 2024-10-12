@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class TasaCambio {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. Dólares a pesos");
+        System.out.println("2. Euro a pesos");
+        System.out.println("3. Yenes a pesos");
+        System.out.println("4. Salir");
+        int opcion = sc.nextInt();
+        
+        switch (opcion) {
+            case 1:
+                System.out.print("Ingrese dólares: ");
+                double dolares = sc.nextDouble();
+                System.out.println("Pesos: " + (dolares * 4200));
+                break;
+            case 2:
+                System.out.print("Ingrese euros: ");
+                double euros = sc.nextDouble();
+                System.out.println("Pesos: " + (euros * 4600));
+                break;
+            case 3:
+                System.out.print("Ingrese yenes: ");
+                double yenes = sc.nextDouble();
+                System.out.println("Pesos: " + (yenes * 30));
+                break;
+            case 4:
+                System.out.println("Saliendo de la aplicación.");
+                break;
+            default:
+                System.out.println("Opción no válida.");
+        }
+        sc.close();
+        
+    }
+}
