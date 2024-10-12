@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class DescuentoSueldo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el sueldo: ");
+        double sueldo = sc.nextDouble();
+        double descuento;
+        if (sueldo <= 1000) {
+            descuento = sueldo * 0.1;
+        } else if (sueldo <= 2000) {
+            descuento = 100 + (sueldo - 1000) * 0.05;
+        } else {
+            descuento = 150 + (sueldo - 2000) * 0.03;
+        }
+        
+        double sueldoNeto = sueldo - descuento;
+        System.out.println("Descuento: " + descuento);
+        System.out.println("Sueldo neto: " + sueldoNeto);
+        sc.close();
+    }
+}    
