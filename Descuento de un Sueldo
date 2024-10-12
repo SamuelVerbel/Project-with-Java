@@ -1,22 +1,36 @@
 import java.util.Scanner;
 
 public class DescuentoSueldo {
+    // Declaramos la constante IVA
+    public static final double IVA = 0.19;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese el sueldo: ");
         double sueldo = sc.nextDouble();
         double descuento;
+
+        // Condicionales anidados para calcular el descuento
         if (sueldo <= 1000) {
-            descuento = sueldo * 0.1;
+            descuento = sueldo * 0.1;  // 10% de descuento
         } else if (sueldo <= 2000) {
-            descuento = 100 + (sueldo - 1000) * 0.05;
+            descuento = 100 + (sueldo - 1000) * 0.05;  // 5% del excedente
         } else {
-            descuento = 150 + (sueldo - 2000) * 0.03;
+            descuento = 150 + (sueldo - 2000) * 0.03;  // 3% del excedente
         }
-        
+
+        // Calcular sueldo neto aplicando el descuento
         double sueldoNeto = sueldo - descuento;
+
+        // Aplicar IVA al sueldo neto (opcional, según tu requerimiento)
+        double sueldoConIVA = sueldoNeto * (1 + IVA);
+
+        // Mostrar los resultados
         System.out.println("Descuento: " + descuento);
         System.out.println("Sueldo neto: " + sueldoNeto);
+        System.out.println("Sueldo con IVA: " + sueldoConIVA);
+
+        // Cerrar el Scanner para evitar fugas de recursos
         sc.close();
     }
-}    
+}
