@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Estacionamiento {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese el número de horas");
+        int horas = sc.nextInt();
+        
+        int total = 3000 + (horas - 1) * 2000;
+        double descuento = 0;
+
+        // Condicional para aplicar descuento
+        if (total >= 20000) {
+            descuento = total * 0.1;
+        }
+        
+        double totalPagar = total - descuento;
+        
+        System.out.println("Total: " + total);
+        System.out.println("Descuento: " + descuento);
+        System.out.println("Total a pagar: " + totalPagar);
+    }
+}
