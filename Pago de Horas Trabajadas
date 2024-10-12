@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class PagoHoras {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Horas trabajadas: ");
+        int horas = sc.nextInt();
+        
+        // Condicional para calcular el pago
+        int pago;
+        if (horas > 20) {
+            pago = horas * 12000;
+        } else {
+            pago = horas * 10000;
+        }
+        System.out.println("Pago total: " + pago);
+        sc.close();
+    }
+}
